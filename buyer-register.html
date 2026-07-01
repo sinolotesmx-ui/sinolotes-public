@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de comprador | SinoLotes Mexico</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-lotes-source="public-lotes">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/img/brand/sinolotes-logo.png" alt="SinoLotes"><span>SinoLotes<small>Mexico</small></span></a>
+      <nav class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="lotes.html" data-i18n="nav.lotes">Lotes</a>
+        <a href="buyer-register.html" data-i18n="nav.buyerRegister">Registro comprador</a>
+        <a href="buyer-request.html" data-i18n="nav.buyerRequest">Solicitud de compra</a>
+        <a href="publicar.html" data-i18n="nav.publish">Publicar lote</a>
+      </nav>
+      <div class="language-switch" data-i18n-aria="lang.label"><span data-i18n="lang.label">Idioma:</span><button type="button" data-lang-choice="es">Español</button><button type="button" data-lang-choice="zh">中文</button></div>
+      <button class="mobile-toggle" data-menu-toggle type="button" data-i18n="nav.menu">Menú</button>
+    </div>
+  </header>
+  <div class="demo-banner"><div class="container"><span data-i18n="demo.label">Vista de prueba · Datos de ejemplo</span><span data-i18n="buyer.testNotice">Versión de prueba. Los datos se usarán para el flujo piloto de SinoLotes. La versión final usará una base de datos segura.</span></div></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-i18n="buyer.title">Registro de comprador</h1>
+        <p class="lead" data-i18n="buyer.lead">Registra primero tus datos de comprador y entrega. Después, al enviar una solicitud, SinoLotes podrá confirmar lotes, envío y cotización más rápido.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="notice privacy-note" data-i18n="buyer.privacy">Tus datos solo se usan para confirmar lotes, cotización, envío y contacto. No se publican en el sitio.</div>
+        <form class="publish-form buyer-form" data-buyer-profile-form>
+          <fieldset class="wide form-section">
+            <legend data-i18n="buyer.basic">Datos básicos</legend>
+            <div class="form-grid-3">
+              <label><span data-i18n="buyer.contactName">Nombre de contacto</span><input name="name" required></label>
+              <label><span data-i18n="buyer.whatsapp">WhatsApp</span><input name="whatsapp" required></label>
+              <label><span data-i18n="buyer.company">Empresa / tienda (opcional)</span><input name="companyName"></label>
+              <label><span data-i18n="buyer.customerType">Tipo de cliente</span><select name="customerType" required><option data-i18n="buyer.typeRepair">Taller de reparación</option><option data-i18n="buyer.typeWholesale">Mayorista</option><option data-i18n="buyer.typeStore">Tienda</option><option data-i18n="buyer.typeReseller">Revendedor</option><option data-i18n="buyer.typePersonal">Compra personal</option><option data-i18n="buyer.typeOther">Otro</option></select></label>
+              <label><span data-i18n="buyer.city">Ciudad</span><input name="city" required></label>
+              <label><span data-i18n="buyer.postalCode">Código postal</span><input name="postalCode" required></label>
+            </div>
+          </fieldset>
+          <fieldset class="wide form-section">
+            <legend data-i18n="buyer.delivery">Datos de entrega</legend>
+            <div class="form-grid-3">
+              <label><span data-i18n="buyer.recipientName">Persona que recibe</span><input name="recipientName" required></label>
+              <label><span data-i18n="buyer.recipientWhatsapp">WhatsApp de entrega</span><input name="recipientWhatsapp" required></label>
+              <label><span data-i18n="buyer.state">Estado</span><input name="state" required></label>
+              <label><span data-i18n="buyer.city">Ciudad</span><input name="deliveryCity" required></label>
+              <label><span data-i18n="buyer.colonia">Colonia</span><input name="colonia" required></label>
+              <label><span data-i18n="buyer.street">Calle</span><input name="street" required></label>
+              <label><span data-i18n="buyer.externalNumber">Número exterior</span><input name="externalNumber" required></label>
+              <label><span data-i18n="buyer.internalNumber">Número interior (opcional)</span><input name="internalNumber"></label>
+              <label><span data-i18n="buyer.postalCode">Código postal</span><input name="deliveryPostalCode" required></label>
+              <label class="wide"><span data-i18n="buyer.addressReference">Referencias de dirección</span><textarea name="addressReference"></textarea></label>
+            </div>
+          </fieldset>
+          <fieldset class="wide form-section">
+            <legend data-i18n="buyer.preferences">Preferencias de compra</legend>
+            <div class="form-grid-3">
+              <label><span data-i18n="buyer.categoriesInterest">Categorías de interés</span><input name="categoriesInterest"></label>
+              <label><span data-i18n="buyer.estimatedQuantity">Cantidad estimada de compra</span><input name="estimatedQuantity"></label>
+              <label><span data-i18n="buyer.requiresInvoice">¿Requiere factura? (opcional)</span><select name="requiresInvoice"><option value="" data-i18n="buyer.invoiceUnknown">Por confirmar</option><option value="yes" data-i18n="buyer.invoiceYes">Sí</option><option value="no" data-i18n="buyer.invoiceNo">No</option></select></label>
+              <label class="wide"><span data-i18n="buyer.notes">Notas</span><textarea name="notes"></textarea></label>
+            </div>
+          </fieldset>
+          <div class="wide buyer-actions">
+            <button class="btn btn-primary" type="submit" data-buyer-action="save" data-i18n="buyer.save">Guardar datos de comprador</button>
+            <button class="btn btn-dark" type="submit" data-buyer-action="request" data-i18n="buyer.saveRequest">Guardar y enviar solicitud</button>
+          </div>
+          <div class="wide form-message" data-buyer-profile-message></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div><img class="footer-logo" src="assets/img/brand/sinolotes-logo.png" alt="SinoLotes"><h3>SinoLotes Mexico</h3><p data-i18n="footer.intro">Plataforma de prueba de lotes y proveedores en México.</p></div><div><a href="buyer-request.html" data-i18n="nav.buyerRequest">Solicitud de compra</a></div><div><a href="publicar.html" data-i18n="nav.publish">Publicar lote</a></div><div><p data-i18n="buyer.privacy">Tus datos solo se usan para confirmar lotes, cotización, envío y contacto. No se publican en el sitio.</p></div></div></footer>
+  <script src="assets/js/i18n.js?v=buyer-flow-1" defer></script>
+  <script src="assets/js/i18n-public.js?v=buyer-flow-1" defer></script>
+  <script src="assets/js/app.js?v=buyer-flow-1" defer></script>
+</body>
+</html>

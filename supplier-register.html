@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrar proveedor | SinoLotes Mexico</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/brand/favicon.png"><link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-lotes-source="public-lotes">
+  <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="assets/img/brand/sinolotes-logo.png" alt="SinoLotes"><span>SinoLotes<small>Mexico</small></span></a><nav class="nav-links"><a href="index.html" data-i18n="nav.home">Inicio</a><a href="lotes.html" data-i18n="nav.lotes">Lotes</a><a href="publicar.html" data-i18n="nav.publish">Publicar lote</a><a href="reglas.html" data-i18n="nav.rules">Reglas</a></nav><div class="language-switch" data-i18n-aria="lang.label"><span data-i18n="lang.label">Idioma:</span><button type="button" data-lang-choice="es">Español</button><button type="button" data-lang-choice="zh">中文</button></div><button class="mobile-toggle" data-menu-toggle type="button" data-i18n="nav.menu">Menú</button></div></header>
+  <div class="demo-banner"><div class="container"><span data-i18n="demo.label">Vista de prueba · Datos de ejemplo</span><span data-i18n="demo.form">No envía ni guarda datos reales.</span></div></div>
+  <main>
+    <section class="page-hero"><div class="container"><h1 data-i18n="supplierRegister.title">Registrar proveedor</h1><p class="lead" data-i18n="supplierRegister.lead">Envía datos de proveedor, lote y lista de precios. SinoLotes revisa todo antes de publicar; no hay publicación automática.</p></div></section>
+    <section class="section"><div class="container">
+      <div class="notice privacy-note" data-i18n="supplierRegister.reviewNotice">Los datos del proveedor no se publican. El equipo revisa inventario, precio, imágenes y autorización antes de mostrar cualquier lote.</div>
+      <form class="publish-form" data-publish-form data-required-fields="company,contact,whatsapp,city,mainCategory,localStock,canProvidePriceList,allowReferencePrice,title,quantity,moq">
+        <label><span data-i18n="supplierRegister.company">Empresa / tienda</span><input name="company" required></label>
+        <label><span data-i18n="supplierRegister.contact">Contacto</span><input name="contact" required></label>
+        <label><span data-i18n="supplierRegister.whatsapp">WhatsApp</span><input name="whatsapp" placeholder="DEMO-WA-NEW" required></label>
+        <label><span data-i18n="supplierRegister.city">Ciudad</span><input name="city" required></label>
+        <label><span data-i18n="supplierRegister.mainCategory">Categoría principal</span><select name="mainCategory" required><option value="" data-i18n="publish.select">Seleccionar</option><option data-i18n="category.electronica">Electrónica</option><option data-i18n="category.accesorios">Accesorios</option><option data-i18n="category.hogar">Hogar</option><option data-i18n="category.belleza">Belleza</option><option data-i18n="category.herramientas">Herramientas</option><option data-i18n="category.otros">Otros</option></select></label>
+        <label><span data-i18n="supplierRegister.localStock">¿Tiene inventario local?</span><select name="localStock" required><option value="" data-i18n="publish.select">Seleccionar</option><option data-i18n="supplierRegister.yes">Sí</option><option data-i18n="supplierRegister.no">No</option><option data-i18n="supplierRegister.confirm">Por confirmar</option></select></label>
+        <label><span data-i18n="supplierRegister.priceList">¿Puede enviar Excel / PDF de precios?</span><select name="canProvidePriceList" required><option value="" data-i18n="publish.select">Seleccionar</option><option data-i18n="supplierRegister.yes">Sí</option><option data-i18n="supplierRegister.no">No</option><option data-i18n="supplierRegister.confirm">Por confirmar</option></select></label>
+        <label><span data-i18n="supplierRegister.allowPrice">¿Permite publicar precio de referencia?</span><select name="allowReferencePrice" required><option value="" data-i18n="publish.select">Seleccionar</option><option data-i18n="supplierRegister.yes">Sí</option><option data-i18n="supplierRegister.no">No</option><option data-i18n="supplierRegister.confirm">Por confirmar</option></select></label>
+        <label><span data-i18n="publish.titleField">Título del lote</span><input name="title" required></label>
+        <label><span data-i18n="publish.quantity">Cantidad</span><input name="quantity" required></label>
+        <label>MOQ<input name="moq" required></label>
+        <label><span data-i18n="publish.price">Precio de referencia proveedor</span><input name="price" placeholder="Prueba / pendiente" data-i18n-placeholder="publish.pricePlaceholder"></label>
+        <label><span data-i18n="publish.image">Imagen del lote</span><input type="file" accept="image/*,.pdf,.xlsx,.csv" disabled><small data-i18n="publish.imageHelp">Versión de prueba: enviar archivo por canal seguro.</small></label>
+        <label class="wide"><span data-i18n="publish.notes">Notas</span><textarea name="notes"></textarea></label>
+        <div class="wide"><button class="btn btn-primary" type="submit" data-i18n="publish.submit">Enviar datos de proveedor</button></div>
+        <div class="wide form-message" data-form-message data-i18n="supplierRegister.message">Este formulario valida campos en frontend. Queda pendiente de revisión y no publica datos automáticamente.</div>
+      </form>
+    </div></section>
+  </main>
+  <script src="assets/js/i18n.js?v=simple-mvp-1" defer></script>
+  <script src="assets/js/i18n-public.js?v=simple-mvp-1" defer></script>
+  <script src="assets/js/app.js?v=simple-mvp-1" defer></script>
+</body>
+</html>
